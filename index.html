@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="handheldfriendly" content="true">
+	<meta name="mobileoptimized" content="240">
+	<meta name="viewport" content="width=device-width,intial-scale=1">
+	<link href="css/general.css" rel="stylesheet">
+	<title>DF Branding</title>
+</head>
+<body>
+    
+    <img src="images/Brand1.jpg" class="flex-img">
+    <img src="images/Brand2.jpg" class="flex-img">
+    <img src="images/Brand3.jpg" class="flex-img">
+    
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+    </script>
+    
+</body>
+</html>
